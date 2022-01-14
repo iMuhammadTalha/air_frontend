@@ -98,7 +98,7 @@ class RecentAQI extends Component {
                         currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
                         />
-                        <ReactTable
+                        {/* <ReactTable
                             data={data}
                             columns={columns}
                             defaultPageSize={7}
@@ -107,7 +107,7 @@ class RecentAQI extends Component {
                             getTrProps={this.getTrProps}
                             // trStyleCallback={ data => ( {color: data.row.Category=='Healthy' ? 'green' : 'red'} ) }
 
-                        />
+                        /> */}
 
                     
             </div>

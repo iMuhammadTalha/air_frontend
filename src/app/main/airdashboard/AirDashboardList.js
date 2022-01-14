@@ -47,50 +47,53 @@ class AirDashboardList extends Component {
                         animation: "transition.slideUpBigIn"
                     }}
                 >
-                    <div className="mb-16 w-full">
-                        <div className="widget w-full p-16">
-                            <RecentAQI />
-                        </div>
-                    </div>
+                    
                        
                     
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <CH4 />
                     </div>
                     
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <NO2 />
                     </div>
 
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <NH3 />
                     </div>
 
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <CO />
                     </div>
 
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <CO2 />
                     </div>
                     
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <Dust />
                     </div>
 
 
-                    <div className="widget flex w-full sm:w-1/2 md:w-2/4 p-12">
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <Temperature />
                     </div>
-                    <div className="widget flex w-full sm:w-1/2 md:w-2/4 p-12">
+
+                    <div className="widget flex w-full sm:w-1/6 md:w-1/8 p-12">
                         <Humidity />
                     </div>
 
                     <div className="mb-16 w-full">
                         <div className="widget w-full p-16">
-                            <Legend />
+                            <RecentAQI />
                         </div>
                     </div>
+                    
+                    {/* <div className="mb-16 w-full">
+                        <div className="widget w-full p-16">
+                            <Legend />
+                        </div>
+                    </div> */}
                 </FuseAnimateGroup>
             
             </div>

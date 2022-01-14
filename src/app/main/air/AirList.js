@@ -175,12 +175,12 @@ class AirList extends Component {
                             filterable: false,
                             className: 'justify-center font-bold'
                         },
-                        {
-                            Header: 'Node',
-                            accessor: 'node_id',
-                            filterable: false,
-                            className: 'justify-center font-bold'
-                        }
+                        // {
+                        //     Header: 'Node',
+                        //     accessor: 'node_id',
+                        //     filterable: false,
+                        //     className: 'justify-center font-bold'
+                        // }
                     ]}
                     defaultPageSize={20}
                     resizable={true}

@@ -31,9 +31,9 @@ class AirDashboardApp extends Component {
         return (
             <React.Fragment>
                 <FusePageSimple
-                    header={
-                        <AirDashboardHeader pageLayout={() => this.pageLayout}/>
-                    }
+                    // header={
+                    //     <AirDashboardHeader pageLayout={() => this.pageLayout}/>
+                    // }
                     content={<AirDashboardList/>}
                     sidebarInner
                     onRef={(instance) => {
