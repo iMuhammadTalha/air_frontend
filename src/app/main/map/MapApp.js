@@ -8,20 +8,20 @@ import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import withReducer from "app/store/withReducer";
 import _ from "@lodash";
-import GraphList from "./GraphList";
-import GraphHeader from "./GraphHeader";
+import AirList from "./AirList";
+import AirHeader from "./MapHeader";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
-class GraphApp extends Component {
+class MapApp extends Component {
     componentDidMount() {
-        this.props.getAllGraphs();
+        this.props.getAllAirs();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (!_.isEqual(this.props.location, prevProps.location)) {
-            this.props.getAllGraphs();
+            this.props.getAllAirs();
         }
     }
 
@@ -29,10 +29,10 @@ class GraphApp extends Component {
         return (
             <React.Fragment>
                 <FusePageSimple
-                    // header={
-                    //     <GraphHeader pageLayout={() => this.pageLayout}/>
-                    // }
-                    content={<GraphList/>}
+                    header={
+                        <AirHeader pageLayout={() => this.pageLayout}/>
+                    }
+                    content={<AirList/>}
                     sidebarInner
                     onRef={(instance) => {
                         this.pageLayout = instance;
@@ -47,23 +47,23 @@ class GraphApp extends Component {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
         {
-            getAllGraphs: Actions.getAllGraphs
+            getAllAirs: Actions.getAllAirs
         },
         dispatch
     );
 }
 
-function mapStateToProps({GraphApp}) {
+function mapStateToProps({AirApp}) {
     return {
-        graphs: GraphApp.GraphReducer.entities
+        airs: AirApp.AirReducer.entities
     };
 }
 
 export default withReducer(
-    "GraphApp",
+    "AirApp",
     reducer
 )(
     withStyles({withTheme: true})(
-        withRouter(connect(mapStateToProps, mapDispatchToProps)(GraphApp))
+        withRouter(connect(mapStateToProps, mapDispatchToProps)(AirApp))
     )
 );

@@ -1,38 +1,27 @@
-/** @format */
-
 import React, {Component} from "react";
-import {withStyles} from "@material-ui/core/styles";
 import {FusePageSimple} from "@fuse";
 import {bindActionCreators} from "redux";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import withReducer from "app/store/withReducer";
-import _ from "@lodash";
-import GraphList from "./GraphList";
-import GraphHeader from "./GraphHeader";
+import DispatchData from "./DispatchData";
+import DispatchHeader from "./DispatchHeader";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
-class GraphApp extends Component {
-    componentDidMount() {
-        this.props.getAllGraphs();
-    }
+class DispatchApp extends Component {
 
-    componentDidUpdate(prevProps, prevState) {
-        if (!_.isEqual(this.props.location, prevProps.location)) {
-            this.props.getAllGraphs();
-        }
+    componentDidMount() {
+        this.props.getAllServices();
     }
 
     render() {
         return (
             <React.Fragment>
                 <FusePageSimple
-                    // header={
-                    //     <GraphHeader pageLayout={() => this.pageLayout}/>
-                    // }
-                    content={<GraphList/>}
+                    header={<DispatchHeader pageLayout={() => this.pageLayout}/>}
+                    content={<DispatchData/>}
                     sidebarInner
                     onRef={(instance) => {
                         this.pageLayout = instance;
@@ -47,23 +36,21 @@ class GraphApp extends Component {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
         {
-            getAllGraphs: Actions.getAllGraphs
+            getAllServices: Actions.getAllServices
         },
         dispatch
     );
 }
 
-function mapStateToProps({GraphApp}) {
+function mapStateToProps({DispatchApp}) {
     return {
-        graphs: GraphApp.GraphReducer.entities
+        user: DispatchApp.user,
     };
 }
 
 export default withReducer(
-    "GraphApp",
+    "DispatchApp",
     reducer
 )(
-    withStyles({withTheme: true})(
-        withRouter(connect(mapStateToProps, mapDispatchToProps)(GraphApp))
-    )
+    withRouter(connect(mapStateToProps, mapDispatchToProps)(DispatchApp))
 );

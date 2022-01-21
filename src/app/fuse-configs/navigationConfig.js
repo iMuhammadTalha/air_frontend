@@ -29,7 +29,7 @@ const superAdminNavigationConfig = [
         id: 'Readings',
         title: 'Air',
         type: 'group',
-        icon: 'whatshot',
+        icon: 'apps',
         children: [
             // {
             //     id: 'dashboard',
@@ -52,13 +52,20 @@ const superAdminNavigationConfig = [
                 icon: 'whatshot',
                 url: '/air'
             },
-            // {
-            //     id: 'graph',
-            //     title: 'Graph',
-            //     type: 'item',
-            //     icon: 'whatshot',
-            //     url: '/graph'
-            // },
+            {
+                id: 'air',
+                title: 'Map',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/map-node'
+            },
+            {
+                id: 'graph',
+                title: 'Graph',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/graph'
+            },
             // {
             //     id: 'graphPrediction',
             //     title: 'Graph Predictions',
@@ -66,7 +73,7 @@ const superAdminNavigationConfig = [
             //     icon: 'whatshot',
             //     url: '/graph-prediction'
             // }
-        ]
+        ] 
     },
     {
         id: 'report-group',

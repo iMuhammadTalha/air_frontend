@@ -1,0 +1,12 @@
+.MuiDrawer-root-223 {
+    display: none;
+}
+
+.MuiDrawer-root {
+    display: none;
+}
+
+[class *= "makeStyles-header"] {
+    height: 60px;
+    min-height: 60px;
+}

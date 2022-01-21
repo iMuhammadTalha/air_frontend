@@ -27,16 +27,16 @@ class ch4 extends Component {
                 {/* <h3>{ch4<50 ? 'Good' : ch4<150 ? 'Moderator' : ch4>150 ? 'Danger' : {}}</h3> */}
                 </div>
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
-                    <IconButton aria-label="more" onClick={this.refreshData}>
+                    {/* <IconButton aria-label="more" onClick={this.refreshData}>
                         <Icon>refresh</Icon>
-                    </IconButton>
+                    </IconButton> */}
                 </div>
                 
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{ch4 ? ch4 : 0}</Typography>
                         <Typography  style={ ch4>300 ? { color: '#FFFFFF' } : {}}>ppm </Typography>
-                    <Typography className="text-16" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF' } : {}}><h1>CH4</h1></Typography>
+                    <Typography className="text-16" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF' } : {}}><h3>CH4</h3></Typography>
                 </div>
             </Paper>
         );

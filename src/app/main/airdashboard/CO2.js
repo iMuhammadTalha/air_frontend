@@ -25,16 +25,16 @@ class co2 extends Component {
             <Paper className="w-full rounded-8 border-1" style={co2<1000 ? {backgroundColor:"#00E000"} : co2<2000 ? {backgroundColor:"#FFFF00"} : co2<5000 ? {backgroundColor:"#FF7600"} : co2<10000 ? {backgroundColor:"#FF0000"} : co2<20000 ? {backgroundColor:"#990049"} : co2<40000 ? {backgroundColor:"#7E0023"} : co2>40000 ? {backgroundColor:"#3E0023"} : {} }>
                 {this.props.user.role[0] !== "fleet" &&
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
-                    <IconButton aria-label="more" onClick={this.refreshData}>
+                    {/* <IconButton aria-label="more" onClick={this.refreshData}>
                         <Icon>refresh</Icon>
-                    </IconButton>
+                    </IconButton> */}
                 </div>
                 }
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{co2 ? co2 : 0}</Typography>
                         ppm
-                    <Typography className="text-16" color="textSecondary"><h1>CO2</h1></Typography>
+                    <Typography className="text-16" color="textSecondary"><h2>CO2</h2></Typography>
                 </div>
             </Paper>
         );

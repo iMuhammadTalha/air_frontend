@@ -19,6 +19,8 @@ const initialState = {
 const GraphReducer = function (state = initialState, action) {
     switch (action.type) {
         case Actions.GET_ALL_GRAPHS: {
+
+            console.log('R', action.payload.AQIAvgColor );
             return {
                 ...state,
                 nh3Avg: action.payload.nh3Avg,
