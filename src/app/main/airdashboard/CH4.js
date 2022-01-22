@@ -36,7 +36,7 @@ class ch4 extends Component {
                     <Typography
                         className="text-56 leading-none text-purple-dark">{ch4 ? ch4 : 0}</Typography>
                         <Typography  style={ ch4>300 ? { color: '#FFFFFF' } : {}}>ppm </Typography>
-                    <Typography className="text-16" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF' } : {}}><h3>CH4</h3></Typography>
+                    <Typography className="text-16" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF' } : {}}><h2>CH4</h2></Typography>
                 </div>
             </Paper>
         );
