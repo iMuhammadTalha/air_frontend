@@ -9,7 +9,7 @@ const config = {
             position: 'left'
         },
         toolbar: {
-            display: false,
+            display: true,
             style: 'static',
             position: 'below'
         },
