@@ -31,13 +31,7 @@ const superAdminNavigationConfig = [
         type: 'group',
         icon: 'apps',
         children: [
-            // {
-            //     id: 'dashboard',
-            //     title: 'Dashbaord',
-            //     type: 'item',
-            //     icon: 'whatshot',
-            //     url: '/dashboard'
-            // },
+            
             {
                 id: 'airdashboard',
                 title: 'Dashbaord',
@@ -53,18 +47,18 @@ const superAdminNavigationConfig = [
                 url: '/air'
             },
             {
-                id: 'air',
-                title: 'Map',
-                type: 'item',
-                icon: 'whatshot',
-                url: '/map-node'
-            },
-            {
                 id: 'graph',
                 title: 'Graph',
                 type: 'item',
                 icon: 'whatshot',
                 url: '/graph'
+            },
+            {
+                id: 'dashboard',
+                title: 'Map',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/map'
             },
             // {
             //     id: 'graphPrediction',

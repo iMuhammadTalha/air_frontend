@@ -10,7 +10,7 @@ export const DashboardAppConfig = {
     auth: authRoles.all,
     routes: [
         {
-            path: "/dashboard",
+            path: "/map",
             component: DashBoardApp
         }
     ]

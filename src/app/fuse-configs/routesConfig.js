@@ -14,7 +14,6 @@ import {AirAppConfig} from "app/main/air/AirAppConfig";
 import {GraphAppConfig} from "app/main/graph/GraphAppConfig";
 import {GraphPredictionAppConfig} from "app/main/graph-prediction/GraphPredictionAppConfig";
 
-// import {MapAppConfig} from "app/main/map-node/MapAppConfig";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -30,8 +29,7 @@ const routeConfigs = [
     GraphPredictionAppConfig,
     LogoutConfig,
     GraphAppConfig,
-    Error404PageConfig,
-    // MapAppConfig
+    Error404PageConfig
 ];
 
 const routes = [
