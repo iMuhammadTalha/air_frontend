@@ -89,7 +89,7 @@
     "webpack-bundle-analyzer": "3.0.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",   
+    "start": "PORT=3001 react-scripts --openssl-legacy-provider start",   
     "build": "yarn run tailwind && node ./purge-tailwindcss.js && cross-env NODE_PATH=src GENERATE_SOURCEMAP=false react-scripts build",
     "tailwind": "./node_modules/.bin/tailwind build ./src/styles/tailwind.base.css -c ./tailwind.js -o ./src/styles/tailwind.css",
     "test": "cross-env NODE_PATH=src react-scripts test --env=node",
