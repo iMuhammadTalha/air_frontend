@@ -10,6 +10,7 @@ export const GET_ALL_AIRDASHBOARDS = "[AIRDASHBOARDS APP] GET AIRDASHBOARDS";
 
 export const GET_RECENT_AQI = "[DASHBOARD APP] GET RECENT AQI";
 export const GET_A_RECENT_READING = "[DASHBOARD APP] GET RECENT READING";
+export const GET_PAST_AQI_DATA = "[DASHBOARD APP] GET PAST AQI";
 
 let selectedSearch = {
     nodeId: 1
@@ -82,10 +83,38 @@ export const getARecentReading = () => (dispatch) => {
             });
         })
         .then(() => dispatch(updateAQI()))
+        .then(() => dispatch(getPastAQIData()))
         .catch((err) => {
             dispatch(
                 showMessage({
                     message: "Unable to get recent air reading...",
+                    variant: "error"
+                })
+            );
+        });
+};
+
+export const getPastAQIData = () => (dispatch) => {
+    
+    
+    let query = "air/get-aqi-graph/" +selectedSearch.nodeId ;
+    
+    
+    axios
+        .get(Base_URL + query)
+        .then((res) => {
+            console.log('RESPONSE',res.data);
+            dispatch({
+                type: GET_PAST_AQI_DATA,
+                payload: res.data,
+            });
+
+            return {};
+        })
+        .catch((err) => {
+            dispatch(
+                showMessage({
+                    message: "Unable to get graphs...",
                     variant: "error"
                 })
             );

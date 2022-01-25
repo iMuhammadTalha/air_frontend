@@ -18,6 +18,7 @@ import Dust from "./dust"
 import Humidity from "./humidity";
 import Temperature from "./temperature"
 import Legend from "./legend";
+import Aqi from "./aqi";
 
 class AirDashboardList extends Component {
     state = {
@@ -86,6 +87,16 @@ class AirDashboardList extends Component {
                     <div className="mb-16 w-full">
                         <div className="widget w-full p-16">
                             <RecentAQI />
+                        </div>
+                    </div>
+
+                    <div className="mb-16 w-full">
+                        <div className="widget w-full p-16">
+                            
+                            <Aqi />
+
+
+
                         </div>
                     </div>
                     

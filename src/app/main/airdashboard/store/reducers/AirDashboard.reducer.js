@@ -17,7 +17,9 @@ const initialState = {
     nh3: 0,
     no2: 0,
     co2: 0,
-    temperature: 0
+    temperature: 0,
+    AQIAvg: [],
+    dates: []
 };
 
 const AirDashboardReducer = function (state = initialState, action) {
@@ -49,6 +51,16 @@ const AirDashboardReducer = function (state = initialState, action) {
                 co2: action.payload.co2,
                 temperature: action.payload.temperature,
                 created_time: action.payload.created_time
+            };
+        }
+
+        case Actions.GET_PAST_AQI_DATA: {
+
+            console.log('R', action.payload.AQIAvgColor );
+            return {
+                ...state,
+                dates: action.payload.dates,
+                AQIAvg: action.payload.AQIAvg
             };
         }
         
